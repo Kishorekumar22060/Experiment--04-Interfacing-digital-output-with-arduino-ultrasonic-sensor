@@ -39,9 +39,8 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 
 ![image](https://user-images.githubusercontent.com/36288975/166430594-5adb4ca9-5a42-4781-a7e6-7236b3766a85.png)
 
+### Schematic view
 ![image](https://github.com/Kishorekumar22060/Experiment--04-Interfacing-digital-output-with-arduino-ultrasonic-sensor/assets/141472136/6f4c7e29-acda-4944-a641-790251f56e44)
-
-
 
 
 ### PROCEDURE:
@@ -106,6 +105,8 @@ void loop()
 }
 ```
 
+### Serial Monitor
+![image](https://github.com/Kishorekumar22060/Experiment--04-Interfacing-digital-output-with-arduino-ultrasonic-sensor/assets/141472136/bdabb131-c7f1-488c-bd76-11df38fc7cb8)
 
 
 ### Distance vs measurement table 
@@ -113,35 +114,18 @@ void loop()
 
 
 			Average error = sum/ number of readings 
+   			Average error = -0.44
+
 
 ### Distance vs measurement Graph
 
 ![image](https://github.com/Kishorekumar22060/Experiment--04-Interfacing-digital-output-with-arduino-ultrasonic-sensor/assets/141472136/bacbcb0c-0264-4303-aa1e-4e9899badfa6)
 
 
-			
- 
-			
-			
-			
-
-
-			
-			
-			
-			
-			
-			
- 
-
-
-
-
-
-
-
 
 ### RESULTS
+
+Thus the distance value is measured in "CM" using ultrasonic sensor
 
 
 

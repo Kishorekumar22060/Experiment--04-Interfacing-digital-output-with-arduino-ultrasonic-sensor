@@ -39,6 +39,9 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 
 ![image](https://user-images.githubusercontent.com/36288975/166430594-5adb4ca9-5a42-4781-a7e6-7236b3766a85.png)
 
+![image](https://github.com/Kishorekumar22060/Experiment--04-Interfacing-digital-output-with-arduino-ultrasonic-sensor/assets/141472136/6f4c7e29-acda-4944-a641-790251f56e44)
+
+
 
 
 ### PROCEDURE:
@@ -55,13 +58,66 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 
 
 ### PROGRAM 
+```
+Developed by: KISHORE KUMAR U
+Registered No: 212222233003
+const int trigpin=10;
+const int echopin=9;
+int red=7;
+int green=6;
+long duration;
+float distance;
 
+void setup()
+{
+  pinMode(trigpin, OUTPUT);
+  pinMode(echopin, INPUT);
+  pinMode(red, OUTPUT);
+  pinMode(green, OUTPUT);
+  Serial.begin(9600);
+}
 
-
+void loop()
+{
+  digitalWrite(trigpin, LOW);
+  delay(20); // Wait for 1000 millisecond(s)
+  digitalWrite(trigpin, HIGH);
+  delay(20); 
+  digitalWrite(trigpin, LOW);
+  duration=pulseIn(echopin,HIGH);
+  distance=duration*0.034/2;
+  Serial.print(distance);
+  Serial.println("cm");
+  
+  if(distance>5)
+  {
+	digitalWrite(red, HIGH);
+  delay(200);
+    digitalWrite(red, LOW);
+  delay(200);
+  }
+  else
+  {
+	digitalWrite(green, HIGH);
+  delay(200);
+    digitalWrite(green, LOW);
+  delay(200);
+  }
+}
+```
 
 
 
 ### Distance vs measurement table 
+![image](https://github.com/Kishorekumar22060/Experiment--04-Interfacing-digital-output-with-arduino-ultrasonic-sensor/assets/141472136/ec36eecd-a95e-4667-8a7d-bbcfd6c867ca)
+
+
+			Average error = sum/ number of readings 
+
+### Distance vs measurement Graph
+
+![image](https://github.com/Kishorekumar22060/Experiment--04-Interfacing-digital-output-with-arduino-ultrasonic-sensor/assets/141472136/bacbcb0c-0264-4303-aa1e-4e9899badfa6)
+
 
 			
  
@@ -69,14 +125,13 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 			
 			
 
-![image](https://user-images.githubusercontent.com/36288975/190135379-52ebacd5-ccd5-460f-a4cd-4d0ad1d9b179.png)
 
 			
 			
 			
 			
 			
-			Average error = sum/ number of readings 
+			
  
 
 
